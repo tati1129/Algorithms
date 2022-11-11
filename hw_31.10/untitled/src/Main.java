@@ -1,5 +1,5 @@
 public class Main {
-    public static int findIndex (int arr[], int x) {
+    public static int findIndex (int arr[], int value) {
         // TODO:
         //     1. Linear Search
         //    Given an array arr[] of N elements, the challenge is to write a function to find a given element x in arr[] .
@@ -13,13 +13,13 @@ public class Main {
 
         //int[] arr = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         //int x = 8;
-        int index=-1;
+
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == x) {
-               index=i;
+            if (arr[i] == value) {
+               return i;
             }
         }
-        return index;
+        return -1;
     }
     // TODO:
     //  2. Find the element that appears once in a sorted array
@@ -57,5 +57,45 @@ public class Main {
         int arr1[]= new int[]{1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10};
         System.out.println(findElements(arr)); //  9 (длина массива)
         System.out.println(findElements(arr1)); //  -1
+
+
+        /*
+        int[] a1 = new int[] { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5 };
+        int[] a2 = new int[] { 1, 1, 2, 3, 3, 4, 4, 5, 5 };
+        int[] a3 = new int[] { 1, 2, 2, 3, 3, 4, 4, 5, 5 };
+        int[] a4 = new int[] { 1, 1, 2, 2, 3, 3, 4, 4, 5 };
+        int[] a5 = new int[] { 1 };
+
+        System.out.println(task2(a1));
+        System.out.println(task2(a2));
+        System.out.println(task2(a3));
+        System.out.println(task2(a4));
+        System.out.println(task2(a5));
+
+         */
     }
+
+    /*
+    public static int task2(int[] arr) {
+        int l = arr.length;
+
+        if (l == 1) {
+            return arr[0];
+        }
+
+        if (arr[l - 1] != arr[l - 2]) {
+            return arr[l - 1];
+        }
+
+        for (int i = 0; i < l - 1; i += 2) {
+            if (arr[i] != arr[i + 1]) {
+                return arr[i];
+            }
+        }
+
+        return -1;
+    }
+
+     */
+
     }
